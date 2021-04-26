@@ -15,9 +15,11 @@ if __name__ == '__main__':
     linked_list.append_node(55)
     linked_list.append_node(60)
     linked_list.append_node(65)
-    linked_list.add_node_to_beginning(50)
-    print(linked_list.head.data)
 
-    linked_list.add_node_to_beginning(45)
-    print(linked_list.head.data)
-    print(linked_list.tail.data)
+
+    linked_list.add_node_to_beginning(50)
+
+    linked_list.print_list()
+
+    test = linked_list.contains(45)
+    print(test)
