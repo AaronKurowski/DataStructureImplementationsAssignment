@@ -36,3 +36,41 @@ class BST(Node):
                     current.right_child = Node(value)
                 else:
                     self.add(current.right_child, value)
+
+    def search(self, root,  value):
+        while root is not None:
+            if value < root.data:
+                root = root.left_child
+            elif value > root.data:
+                root = root.right_child
+            else:
+                print("Value is in the tree!")
+                return True
+        print("Value not in tree")
+        return False
+
+    def visit(self, node):
+        print(node.data)
+
+    def preorder(self, current):
+        self.visit(current)
+        self.preorder(current.left_child)
+        self.preorder(current.right_child)
+
+    def inorder(self, current):
+        self.inorder(current.left_child)
+        self.visit(current)
+        self.inorder(current.right_child)
+
+    def postorder(self, current):
+        self.postorder(current.left_child)
+        self.postorder(current.right_child)
+        self.visit(current)
+
+    # def create_nodes(self):
+    #     node1 = Node(12)
+    #     node2 = Node(15)
+    #     node3 = Node(9)
+    #     node4 = Node(3)
+    #     node5 = Node(16)
+    #     node6 = Node(5)
