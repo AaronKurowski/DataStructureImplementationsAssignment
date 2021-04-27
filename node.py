@@ -22,10 +22,10 @@ class BST(Node):
     def add(self, current, value):
         """Creates a bst from scratch"""
         if self.root is None:
-            # if no root, create one!
+            # No root? create one!
             self.root = Node(value)
         else:
-            # compare root to one being added and correctly place it
+            # compare value to current.data and place it correctly
             if value < current.data:
                 if current.left_child is None:
                     current.left_child = Node(value)
@@ -53,19 +53,22 @@ class BST(Node):
         print(node.data)
 
     def preorder(self, current):
-        self.visit(current)
-        self.preorder(current.left_child)
-        self.preorder(current.right_child)
+        if current:
+            self.visit(current)
+            self.preorder(current.left_child)
+            self.preorder(current.right_child)
 
     def inorder(self, current):
-        self.inorder(current.left_child)
-        self.visit(current)
-        self.inorder(current.right_child)
+        if current:
+            self.inorder(current.left_child)
+            self.visit(current)
+            self.inorder(current.right_child)
 
     def postorder(self, current):
-        self.postorder(current.left_child)
-        self.postorder(current.right_child)
-        self.visit(current)
+        if current:
+            self.postorder(current.left_child)
+            self.postorder(current.right_child)
+            self.visit(current)
 
     # def create_nodes(self):
     #     node1 = Node(12)

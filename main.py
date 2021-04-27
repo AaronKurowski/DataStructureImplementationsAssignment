@@ -39,15 +39,29 @@ if __name__ == '__main__':
     # print("\n")
     # bst.preorder(bst.root)
 
+    # bst = BST()
+    # bst.add(None, 10)
+    # print(bst.root.data)
+    # bst.add(bst.root, 8)
+    # print(bst.root.left_child.data)
+    # bst.add(bst.root, 9)
+    # print(bst.root.left_child.right_child.data)
+    # bst.add()
+
     bst = BST()
-    bst.add(None, 10)
-    print(bst.root.data)
-    bst.add(bst.root, 8)
-    print(bst.root.left_child.data)
+    bst.root = Node(12)
+    # bst.root.left_child = Node(10)
+    # bst.root.right_child = Node(9)
+    # bst.root.left_child.left_child = Node(5)
+    # bst.root.left_child.right_child = Node(11)
+
+    bst.add(bst.root, 10)
     bst.add(bst.root, 9)
-    print(bst.root.left_child.right_child.data)
+    bst.add(bst.root, 99)
+    bst.add(bst.root, 15)
+    bst.add(bst.root, 2)
+    bst.add(bst.root, 4)
+    bst.add(bst.root, 7)
 
-    bst.search(bst.root, 10)
     bst.preorder(bst.root)
-
-
+    bst.search(bst.root, 99)
