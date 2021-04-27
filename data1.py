@@ -3,11 +3,14 @@ import random
 
 class Data1:
     def __init__(self):
+        # tuple: ordered and unchangeable. duplicates allowed
         self.months = ("January", "February", "March", "April", "May", "June", "July", "August",
                        "September", "October", "November", "December")
 
-        self.birthday_locations = {"Boat", "Backyard", "Haunted House", "My house", "The Moon", ""}
+        # set: unordered, unindexed, and unchangeable. no duplicates
+        self.birthday_locations = {"Boat", "Backyard", "Haunted House", "My house", "The Moon", "Chuck E. Cheese's"}
 
+        # dictionary: ordered, changeable, no duplicates
         self.sweepstakes = {1: {'id': 422, 'name': 'Paul Reevus'},
                             2: {'id': 992, 'name': 'Jim Lahey'},
                             3: {'id': 772, 'name': 'Gustavo Almaduvar'},
@@ -15,13 +18,14 @@ class Data1:
                             5: {'id': 817, 'name': 'Tricia Takanawa'}
                             }
 
+        # list: ordered, changeable, allows duplicates
         self.family_members = [{'fName': 'Paul',
                                 'lName': 'Reevus',
                                 'relationship': 'Brother'},
                                {'fName': 'Jim',
                                 'lName': 'Lahey',
                                 'relationship': 'Uncle'},
-                               {'fName': 'Gustavo Almaduvar',
+                               {'fName': 'Gustavo',
                                 'lName': 'Almaduvar',
                                 'relationship': 'Father'},
                                {'fName': 'Tricia',
